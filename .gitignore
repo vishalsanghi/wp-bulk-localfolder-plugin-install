@@ -1,0 +1,9 @@
+# Excluding Files
+gitcommit.sh
+gitinlrmv.sh
+gitcommit
+gitinlrmv
+wp-cli.phar
+wp-cli
+myconfig.sh
+
