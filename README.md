@@ -12,6 +12,7 @@ This is used for the scenarios where you don't have automatic updates available 
 * Local Plugin Path - pluginpath=<path-to-store-plugins> - This is the path where you will store all your zip plugin files that needs to be installed.
 * Installed Local Plugin Path - ipluginpath=<path-to-move-installed-plugins> - This folder is used to move the installed plugins to other directory to avoid overlaps.
 * Documentation - https://wp-cli.org/
+* If you get any errors you can delete the hidden .keep file from "plugins" and "installedplugins" directory
 
 **Disclaimer:**
 

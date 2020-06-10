@@ -22,11 +22,21 @@ localpluginupdate() {
         echo "Plugin Update Operation from Local Folder Path Started"
         echo "========================================================"
         echo
+
+	# Loop to update the plugin one by one containing in the plugins folders
 	for file in $pluginpath/*; do
 	echo "Initiating the plugin installation from local folder path"
+
+	# Adding the path of the to be installed plugins with all the plugin files
 	plugin=$pluginpath/$(basename "$file")
+
+	# Wordpress CLI commnad to force install the plugin, at specified wordpress installation folder and activating it
 	wp plugin install --force $plugin --activate --path=$WPPATH --allow-root
+
+	# Displays the plugin name installed
 	echo "Plugin $(basename "$file") related operation completed"
+
+	# Moving data from plugin directory to installed plugin directory post installation
 	if [ -d "$ipluginpath" ]
 		then
 			cd $pluginpath
@@ -62,8 +72,10 @@ wpcliinstall() {
 
 if [ -f "$FILE" ]
     then
-        localpluginupdate
+	# Calling the fuction to install the plugin
+	localpluginupdate
     else
-        wpcliinstall
+        # Calling WPCLI installation function to install WPCLI and then install plugin 
+	wpcliinstall
         localpluginupdate
 fi
