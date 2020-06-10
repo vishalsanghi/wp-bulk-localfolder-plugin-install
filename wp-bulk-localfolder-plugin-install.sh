@@ -2,7 +2,7 @@
 # Author: Vishal Dilip Sanghi
 # Install WordPress Bulk Plugin Installation from local folder on a Debian/Ubuntu VPS
 # Created on: 21st May 2020
-# Last Updated on: 21st May 2020
+# Last Updated on: 02 June 2020
 
 # Wordpress Installation Path
 WPPATH=<your-wordpress-installation-path>
