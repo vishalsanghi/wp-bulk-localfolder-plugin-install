@@ -39,7 +39,6 @@ localpluginupdate() {
 	# Moving data from plugin directory to installed plugin directory post installation
 	if [ -d "$ipluginpath" ]
 		then
-			cd $pluginpath
 			mv $pluginpath/$(basename "$file") $ipluginpath/
 			echo "Moved plugin zip file to $ipluginpath"
 		else
